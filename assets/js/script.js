@@ -65,7 +65,16 @@ function renderTaskList() {
         } else { $("#done-cards").append(createTaskCard(task)) }
     }
     $(".task-card").draggable({
-        opacity: 0.7, zIndex: 100
+        opacity: 0.7, zIndex: 100,
+        helper: function (e) {
+            const original = $(e.target).hasClass('ui-draggable')
+              ? $(e.target)
+              : $(e.target).closest('.ui-draggable');
+            return original.clone().css({
+              maxWidth: original.outerWidth(),
+            });
+          },
+
     })
 }
 
@@ -88,7 +97,9 @@ function renderTaskList() {
         localStorage.setItem("tasks", JSON.stringify(taskList));
         renderTaskList();
 
-        $("#taskTitle, #taskDescription, #taskDueDate").val("");
+        $("#taskTitle").val("");
+        $("#taskDescription").val("");
+        $("#taskDueDate").val("");
     }
 
     // Todo: create a function to handle deleting a task
@@ -104,7 +115,7 @@ function renderTaskList() {
     // Todo: create a function to handle dropping a task into a new status lane
     function handleDrop(event, ui) {
         //used to access draggable El and get value of id attr stored in data-id attr
-        const taskid = $(ui.draggable[0]).data('id');
+        const taskid = $(ui.draggable[0]).dataset.taskId;
         //used to get the ID of the target El where items are dropped
         const status = $(event.target).attr('id');
         //used to find and update task with macthing IS in the taskList array
