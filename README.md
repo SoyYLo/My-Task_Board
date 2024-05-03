@@ -21,6 +21,8 @@ I was provided this starter code in GitLab under the Coding Bootcamp at UT at Au
 
 ## Link
 
+https://soyylo.github.io/My-Task_Board/
+
 ## Screenshot
 
 <img width="1476" alt="Screenshot 2024-05-02 at 10 17 11 PM" src="https://github.com/SoyYLo/My-Task_Board/assets/161881415/3eaa0f17-c9b4-4574-8eaa-a129b3c92464">
