@@ -7,21 +7,18 @@ So that I can log and organize my projects and manage and track their progress.
 
 ## Description 
 
-When the page loads I can see an oranized task board to plan and track my project tasks. I am able to click a button to add a new task that's due.
+When the page loads I can see an oranized task board to plan and track my project tasks. 
+I am able to click a button to add a new task that's due. 
+Once I enter the name of my task, decription and due Date then I will see my new task displayed on thre page. 
+The page should organize each task according to the 3 categories. I want the tasks to be assigned a color depending on the status of the task.
+I will also be able to drag the tasks to a new column when I want to update the status of the task.
+Once I have completed the task I can then delete the task from the page.
+
+## Code Source
+
+In this project I was given starter code to modify and add my own code to the javascript file. 
+I was provided this starter code in GitLab under the Coding Bootcamp at UT at Austin repo.
 
 
-GIVEN a task board to manage a project
-WHEN I open the task board
-THEN the list of project tasks is displayed in columns representing the task progress state (Not Yet Started, In Progress, Completed)
-WHEN I view the task board for the project
-THEN each task is color coded to indicate whether it is nearing the deadline (yellow) or is overdue (red)
-WHEN I click on the button to define a new task
-THEN I can enter the title, description and deadline date for the new task into a modal dialog
-WHEN I click the save button for that task
-THEN the properties for that task are saved in localStorage
-WHEN I drag a task to a different progress column
-THEN the task's progress state is updated accordingly and will stay in the new column after refreshing
-WHEN I click the delete button for a task
-THEN the task is removed from the task board and will not be added back after refreshing
-WHEN I refresh the page
-THEN the saved tasks persist
+
+
